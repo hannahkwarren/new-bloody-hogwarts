@@ -1,0 +1,7 @@
+<h1>Student Enrollment Record, <%= @student.id %></h1>
+
+<% @student.courses.each do |course| %>
+  <ul>
+    <li><%= course.name %></li>
+  </ul>
+  <% end %>

@@ -1,0 +1,10 @@
+<h1>Courses Index</h1>
+
+<% @courses.alpha_order.each do |course| %>
+  <p><%= course.name %>: <%=course.students.count %></p>
+  <ul>Students enrolled: 
+    <% course.students.alpha_order.each do |student| %>
+      <li> <%= student.name %> </li>
+    <% end %>
+    </ul>
+  <% end %>

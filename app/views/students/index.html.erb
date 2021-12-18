@@ -1,0 +1,9 @@
+<h1>Students Index</h1>
+
+<% @students.each do |student| %>
+  <div id="student-<%= student.id %>">
+    <p>Name: <%= student.name %>, Age: <%= student.age %>, House: <%= student.house %></p>
+  </div>
+  <% end %>
+
+<p>Average Student Age: <%= @students.average_student_age.to_i %></p>
